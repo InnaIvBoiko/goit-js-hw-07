@@ -28,15 +28,15 @@ h1,
 h2 {
   margin: 0;
   color: #2e2f42;
-  /* font-family: Montserrat; */
   font-size: 24px;
   font-weight: 600;
   line-height: 1.33;
   letter-spacing: 0.04em;
 }
 
-p {
-  margin: 0;
+button {
+  border: none;
+  cursor: pointer;
 }
 
 /* task-1 */
@@ -148,6 +148,10 @@ p {
   align-items: flex-start;
 }
 
+.login-form input {
+  width: 360px;
+}
+
 .login-form button {
   display: flex;
   padding: 8px 16px;
@@ -216,11 +220,16 @@ p {
 
 #boxes {
   display: flex;
+  flex-wrap: wrap;
   padding: 32px;
   align-items: flex-start;
   gap: 10px;
   border-radius: 8px;
   background: #f6f6fe;
+}
+
+#boxes div {
+  flex-shrink: 0;
 }
 
 #controls input {
@@ -232,6 +241,18 @@ p {
   gap: 10px;
   border-radius: 8px;
   border: 1px solid #808080;
+}
+
+/* Hide number input spinners */
+#controls input[type='number']::-webkit-inner-spin-button,
+#controls input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+#controls input[type='number'] {
+  -moz-appearance: textfield;
+  appearance: textfield;
 }
 
 #controls button {
